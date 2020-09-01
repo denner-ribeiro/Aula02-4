@@ -1,9 +1,10 @@
+// Imports
 import express from 'express';
 import mongoose from 'mongoose';
 
 import { studentRouter } from './routes/studentRouter.js';
 
-// Função de conexão com o banco
+// Função de conexão com o banco mongoDB
 (async () => {
   try {
     // Conectar ao MongoDB pelo Mongoose
