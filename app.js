@@ -16,6 +16,7 @@ import { studentRouter } from './routes/studentRouter.js';
       {
         useNewUrlParser: true,
         useUnifiedTopology: true,
+        useFindAndModify: false,
       }
     );
 
