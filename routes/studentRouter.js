@@ -70,25 +70,4 @@ app.delete('/student/:id', async (req, res) => {
   }
 });
 
-// UPDATE
-app.put('/student/:id', async (req, res) => {
-  try {
-    const id = req.params.id;
-
-    // Faz a pesquisa pelo id, faz a atualização dos dados
-    // o new é para retornar o documento depois da atualização
-    const student = await studentModel.findByIdAndUpdate(
-      { _id: id },
-      req.body,
-      {
-        new: true,
-      }
-    );
-
-    res.send(student);
-  } catch (error) {
-    res.status(500).send(error);
-  }
-});
-
 export { app as studentRouter };
