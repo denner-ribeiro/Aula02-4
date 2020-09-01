@@ -6,6 +6,8 @@ import mongoose from 'mongoose';
 
 import { studentRouter } from './routes/studentRouter.js';
 
+const app = express();
+
 // Função de conexão com o banco mongoDB
 (async () => {
   try {
@@ -25,8 +27,6 @@ import { studentRouter } from './routes/studentRouter.js';
     console.log('Erro ao conectar' + error);
   }
 })();
-
-const app = express();
 
 app.use(express.json());
 app.use(studentRouter);
