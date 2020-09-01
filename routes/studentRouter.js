@@ -77,13 +77,9 @@ app.put('/student/:id', async (req, res) => {
 
     // Faz a pesquisa pelo id, faz a atualização dos dados
     // o new é para retornar o documento depois da atualização
-    const student = await studentModel.findByIdAndUpdate(
-      { _id: id },
-      req.body,
-      {
-        new: true,
-      }
-    );
+    const student = await studentModel.findOneAndUpdate({ _id: id }, req.body, {
+      new: true,
+    });
 
     res.send(student);
   } catch (error) {
