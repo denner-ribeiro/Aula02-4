@@ -4,19 +4,19 @@ import mongoose from 'mongoose';
 const studentSchema = mongoose.Schema({
   name: {
     type: String,
-    require: true,
+    required: true,
   },
   subject: {
     type: String,
-    require: true,
+    required: true,
   },
   type: {
     type: String,
-    require: true,
+    required: true,
   },
   value: {
     type: Number,
-    require: true,
+    required: true,
     min: 0,
     // Valida se a nota inserida e menor que zero
     // validate(value) {
