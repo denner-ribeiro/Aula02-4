@@ -81,6 +81,7 @@ app.put('/student/:id', async (req, res) => {
       new: true,
     });
 
+    // retorna o estudante
     res.send(student);
   } catch (error) {
     res.status(500).send(error);
