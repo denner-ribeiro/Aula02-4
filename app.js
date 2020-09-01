@@ -14,7 +14,7 @@ const app = express();
     // Conectar ao MongoDB pelo Mongoose
     // Utilizando variáveis de ambiente para definir informações críticas
     await mongoose.connect(
-      `mongodb+srv://${process.env.USERDB}:${process.env.PWDDB}@bootcamp.mmz96.mongodb.net/grades?retryWrites=true&w=majority'`,
+      `mongodb+srv://${process.env.USERDB}:${process.env.PWDDB}@bootcamp.mmz96.mongodb.net/grades?retryWrites=true&w=1'`,
       {
         useNewUrlParser: true,
         useUnifiedTopology: true,
