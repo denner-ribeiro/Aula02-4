@@ -2,7 +2,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
 // faz a injeção das variáveis do arquivo .env
-require('dotenv').config();
+// require('dotenv').config();
 
 import { studentRouter } from './routes/studentRouter.js';
 
